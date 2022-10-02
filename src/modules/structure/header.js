@@ -1,6 +1,6 @@
 import logoImg from '../../images/cow-icon.png';
 
-function createNavigationBar() {
+function createHeader() {
 
   function createHeader() {
     const header = document.createElement("header");
@@ -97,4 +97,4 @@ function createNavigationBar() {
   return createHeader();
 }
 
-export default createNavigationBar();
+export default createHeader();
