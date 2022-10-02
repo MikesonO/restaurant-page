@@ -130,16 +130,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 function createMain() {
-  const header = document.createElement("main");
+  const main = document.createElement("main");
 
     // header.classList.add("main");
     // header.appendChild(page);
 
-    return header;
+    return main;
   }
 
   /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createMain());
 
+
+/***/ }),
+/* 4 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function createFooter() {
+  const footer = document.createElement("main");
+    footer.classList.add("footer");
+    footer.appendChild(link())
+
+    return footer;
+  }
+
+  function link(){
+    const a = document.createElement("a");
+
+    a.textContent = "MikesonO";
+
+    a.setAttribute("href","https://github.com/MikesonO/restaurant-page");
+    return a;
+  }
+
+  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createFooter());
 
 /***/ })
 /******/ 	]);
@@ -236,6 +263,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_structure_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _modules_structure_main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _modules_structure_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
+
 
 
 
@@ -244,6 +273,7 @@ function pageLoad() {
   console.log(content);
   content.appendChild(_modules_structure_header__WEBPACK_IMPORTED_MODULE_0__["default"]);
   content.appendChild(_modules_structure_main__WEBPACK_IMPORTED_MODULE_1__["default"]);
+  content.appendChild(_modules_structure_footer__WEBPACK_IMPORTED_MODULE_2__["default"]);
 
 }
 
