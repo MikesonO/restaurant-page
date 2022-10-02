@@ -12,7 +12,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _images_cow_icon_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 
 
-function createNavigationBar() {
+function createHeader() {
 
   function createHeader() {
     const header = document.createElement("header");
@@ -109,7 +109,7 @@ function createNavigationBar() {
   return createHeader();
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createNavigationBar());
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createHeader());
 
 /***/ }),
 /* 2 */
@@ -120,6 +120,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "7ff930e8aa47d8bc90a384d5238bdf14.png");
+
+/***/ }),
+/* 3 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function createMain() {
+  const header = document.createElement("main");
+
+    // header.classList.add("main");
+    // header.appendChild(page);
+
+    return header;
+  }
+
+  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createMain());
+
 
 /***/ })
 /******/ 	]);
@@ -215,12 +235,15 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_structure_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _modules_structure_main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+
 
 
 function pageLoad() {
   const content = document.getElementById("content");
   console.log(content);
   content.appendChild(_modules_structure_header__WEBPACK_IMPORTED_MODULE_0__["default"]);
+  content.appendChild(_modules_structure_main__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
 }
 
