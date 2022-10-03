@@ -129,12 +129,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _pages_home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+
+
 function createMain() {
   const main = document.createElement("main");
 
-    // header.classList.add("main");
-    // header.appendChild(page);
-
+    main.appendChild(_pages_home__WEBPACK_IMPORTED_MODULE_0__["default"]);
     return main;
   }
 
@@ -150,7 +151,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 function createFooter() {
-  const footer = document.createElement("main");
+  const footer = document.createElement("footer");
     footer.classList.add("footer");
     footer.appendChild(link())
 
@@ -167,6 +168,72 @@ function createFooter() {
   }
 
   /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createFooter());
+
+/***/ }),
+/* 5 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _images_steak_jpeg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
+
+
+function createHome(){
+  const home = document.createElement("div");
+  home.setAttribute("id","home");
+
+  home.appendChild(createBackground());
+
+  return home
+}
+
+function createBackground(){
+  const backgroundContainer = document.createElement("div");
+  const background = document.createElement("img");
+
+  backgroundContainer.classList.add("background-container");
+  background.setAttribute("src",_images_steak_jpeg__WEBPACK_IMPORTED_MODULE_0__["default"]);
+  background.setAttribute("alt", "Image of Steak");
+  
+  backgroundContainer.appendChild(background);
+  backgroundContainer.appendChild(createHomeContent());
+
+  return backgroundContainer;
+}
+
+function createHomeContent(){
+  const homeContainer = document.createElement("div");
+  const homeText = document.createElement("h1");
+  const bookTableBtn = document.createElement("button");
+  const viewMenuBtn = document.createElement("button");
+
+  homeContainer.setAttribute("class","home-container")
+  homeText.textContent = "London's Premium and Authentic SteakHouse"
+  bookTableBtn.textContent = "Book a Table";
+  viewMenuBtn.textContent = "View Menu";
+  bookTableBtn.setAttribute("class","book-btn");
+  viewMenuBtn.setAttribute("class","view-btn");
+
+
+  homeContainer.append(homeText, bookTableBtn,viewMenuBtn);
+  
+  return homeContainer;
+}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createHome());
+
+/***/ }),
+/* 6 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "021f84383fadf1e20212cef3aa07e627.jpeg");
 
 /***/ })
 /******/ 	]);
@@ -268,13 +335,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function pageLoad() {
   const content = document.getElementById("content");
   console.log(content);
-  content.appendChild(_modules_structure_header__WEBPACK_IMPORTED_MODULE_0__["default"]);
-  content.appendChild(_modules_structure_main__WEBPACK_IMPORTED_MODULE_1__["default"]);
-  content.appendChild(_modules_structure_footer__WEBPACK_IMPORTED_MODULE_2__["default"]);
 
+  content.append(
+    _modules_structure_header__WEBPACK_IMPORTED_MODULE_0__["default"],
+    _modules_structure_main__WEBPACK_IMPORTED_MODULE_1__["default"],
+    _modules_structure_footer__WEBPACK_IMPORTED_MODULE_2__["default"]
+  )
+  
 }
 
 pageLoad();
