@@ -56,6 +56,8 @@ footer a{
   display: flex;
   align-items: center;
   gap: .5rem;
+  color: var(--color3);
+  text-shadow: 2px 2px 2px #000000
 }
 
 
@@ -98,6 +100,7 @@ header{
 
 .home-text span{
   color: var(--color3);
+  text-decoration: underline;
 }
 
 .home-btns{

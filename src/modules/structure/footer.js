@@ -8,10 +8,14 @@ function createFooter() {
 
   function link(){
     const a = document.createElement("a");
+    const github = document.createElement("i");
 
     a.textContent = "MikesonO";
 
+    github.setAttribute("class","fa-brands fa-github")
     a.setAttribute("href","https://github.com/MikesonO/restaurant-page");
+
+    a.append(github);
     return a;
   }
 
