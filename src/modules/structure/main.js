@@ -1,9 +1,9 @@
+import createHome from "../pages/home"
+
 function createMain() {
   const main = document.createElement("main");
 
-    // header.classList.add("main");
-    // header.appendChild(page);
-
+    main.appendChild(createHome);
     return main;
   }
 

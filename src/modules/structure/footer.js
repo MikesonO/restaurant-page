@@ -1,5 +1,5 @@
 function createFooter() {
-  const footer = document.createElement("main");
+  const footer = document.createElement("footer");
     footer.classList.add("footer");
     footer.appendChild(link())
 
