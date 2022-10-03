@@ -37,8 +37,8 @@ function createHomeContent(){
   homeContainer.setAttribute("class","home-container");
   textContainer.setAttribute("class", "text-container");
   homeText.setAttribute("class","home-text");
-  homeText.textContent = "Gourmet. The way burgers should be.";
-  detailText.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  homeText.innerHTML = "The <span>Perfect</span> Burgers in London";
+  detailText.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
   textContainer.append(homeText, detailText)
   homeContainer.append(textContainer, createHomeButtons());

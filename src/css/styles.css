@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* VARIABLES */
+:root{
+  --color1: #EEEEEE;
+  --color2: #1E2022;
+  --color3: #FFD369;
+}
 
 
 /* ELEMENT SELECTORS */
@@ -12,10 +18,11 @@
 body{
   width: 100vw;
   height: 100vh;
-  background-color: #000000;
+  background-color: var(--color2);
   background-image: url("../images/brick-background.jpg");
   background-position: center;
   background-size: cover;
+  font-family: 'Poppins', sans-serif;
 }
 
 main{
@@ -26,16 +33,25 @@ main{
 }
 
 header,footer{
-  color: #ffffff;
-  background-color: #000000;
+  color: var(--color1);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 3;
 }
 
+
+footer{
+  background-image: linear-gradient(#00000000 , #000000 60%);
+}
+
+footer a{
+  color: var(--color1);
+  position: relative;
+  top: 20px;
+}
 .logo{
-  font-family: cursive;
+  font-family: 'Lobster', cursive;
   font-size: 3rem;
   display: flex;
   align-items: center;
@@ -63,7 +79,7 @@ header{
 }
 
 .header ul li a{
-  color: #ffffff;
+  color: var(--color1);
   font-size: 1.25rem;
 }
 
@@ -71,33 +87,52 @@ header{
 .home-container{
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 75px;
 }
 
 .home-text{
-  color: #ffffff;
+  font-size: 3rem;
+  color: #E8E8E8;
 
+}
+
+.home-text span{
+  color: var(--color3);
 }
 
 .home-btns{
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
+  padding: 0 2.5rem;
 }
 
 .btn{
-  width: fit-content;
-  padding: .5rem;
-  color: #ffffff;
-  background-color: #000000;
+  padding: .5rem 1rem; 
+  background-color: var(--color2);
   border: none;
   cursor: pointer;
+  font-size: 1.25rem;
+  border-radius: 20px;
+}
+
+.book-btn{
+  background-color: transparent;
+  border: 2px solid var(--color3);
+  color: var(--color3);
+}
+
+.view-btn{
+  background-color: var(--color3);
+  color: var(--color2);
+  border: 2px solid var(--color3);
 }
 
 .home-container{
   justify-content: left;
-  color: #ffffff;
-  padding: 10rem;
+  color: var(--color1);
+  width: 525px;
+  padding: 2rem;
+  border-radius: 20px;
 }
 
 .text-container{
