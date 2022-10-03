@@ -9,7 +9,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _images_cow_icon_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _images_burger_icon_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(19);
 
 
 function createHeader() {
@@ -81,10 +81,11 @@ function createHeader() {
       const logoText = document.createElement("h1");
       const logoImage = document.createElement("img");
 
-      logoImage.setAttribute("src",_images_cow_icon_png__WEBPACK_IMPORTED_MODULE_0__);
+      logoImage.setAttribute("src",_images_burger_icon_png__WEBPACK_IMPORTED_MODULE_0__);
       logoImage.setAttribute("width", "40px")
       logoImage.setAttribute("alt","Restaurant Logo")
-      logoText.textContent="Steak House";
+      logoText.textContent="Urban Burgers";
+      logoText.setAttribute("class","logo")
       logoLink.setAttribute("href","#");
 
       logoText.appendChild(logoImage);
@@ -115,7 +116,7 @@ function createHeader() {
 /* 2 */
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "7ff930e8aa47d8bc90a3.png";
+module.exports = __webpack_require__.p + "04535cb2ec0024f0d9ae.jpg";
 
 /***/ }),
 /* 3 */
@@ -146,49 +147,72 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _images_steak_jpeg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+/* harmony import */ var _images_burger_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _images_fire_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(17);
+
 
 
 function createHome(){
   const home = document.createElement("div");
   home.setAttribute("id","home");
 
-  home.appendChild(createBackground());
+  home.append(createHomeContent(),createBackground());
 
   return home
 }
 
 function createBackground(){
   const backgroundContainer = document.createElement("div");
-  const background = document.createElement("img");
+  const burger = document.createElement("img");
+  const fire = document.createElement("img")
 
   backgroundContainer.classList.add("background-container");
-  background.setAttribute("src",_images_steak_jpeg__WEBPACK_IMPORTED_MODULE_0__);
-  background.setAttribute("alt", "Image of Steak");
+  burger.setAttribute("src",_images_burger_png__WEBPACK_IMPORTED_MODULE_0__);
+  fire.setAttribute("src",_images_fire_png__WEBPACK_IMPORTED_MODULE_1__);
+  burger.setAttribute("alt", "Image of Steak");
+  burger.setAttribute("class","burger");
+  fire.setAttribute("alt", "Image of Fire");
+  fire.setAttribute("class", "fire-overlay");
   
-  backgroundContainer.appendChild(background);
-  backgroundContainer.appendChild(createHomeContent());
+  backgroundContainer.append(burger,fire);
 
   return backgroundContainer;
 }
 
 function createHomeContent(){
   const homeContainer = document.createElement("div");
+  const textContainer = document.createElement("div");
   const homeText = document.createElement("h1");
+  const detailText = document.createElement("p");
+
+  homeContainer.setAttribute("class","home-container");
+  textContainer.setAttribute("class", "text-container");
+  homeText.setAttribute("class","home-text");
+  homeText.textContent = "Gourmet. The way burgers should be.";
+  detailText.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
+  textContainer.append(homeText, detailText)
+  homeContainer.append(textContainer, createHomeButtons());
+  
+  return homeContainer;
+}
+
+
+function createHomeButtons(){
+  const buttons = document.createElement("div");
   const bookTableBtn = document.createElement("button");
   const viewMenuBtn = document.createElement("button");
 
-  homeContainer.setAttribute("class","home-container")
-  homeText.textContent = "London's Premium and Authentic SteakHouse"
+  buttons.setAttribute("class","home-btns");
+  bookTableBtn.setAttribute("class","book-btn btn");
+  viewMenuBtn.setAttribute("class","view-btn btn");
+
   bookTableBtn.textContent = "Book a Table";
   viewMenuBtn.textContent = "View Menu";
-  bookTableBtn.setAttribute("class","book-btn");
-  viewMenuBtn.setAttribute("class","view-btn");
 
+  buttons.append(bookTableBtn,viewMenuBtn);
 
-  homeContainer.append(homeText, bookTableBtn,viewMenuBtn);
-  
-  return homeContainer;
+  return buttons;
 }
 
 
@@ -196,9 +220,37 @@ function createHomeContent(){
 
 /***/ }),
 /* 5 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((module) => {
 
-module.exports = __webpack_require__.p + "021f84383fadf1e20212.jpeg";
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+
+  if (!url) {
+    return url;
+  }
+
+  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them
+
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+
+  if (options.hash) {
+    url += options.hash;
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+
+  return url;
+};
 
 /***/ }),
 /* 6 */
@@ -571,12 +623,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(16);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(2), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\n  background-color: blue;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* VARIABLES */\n\n\n/* ELEMENT SELECTORS */\n*{\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n  text-decoration: none;\n}\n\nbody{\n  width: 100vw;\n  height: 100vh;\n  background-color: #000000;\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-position: center;\n  background-size: cover;\n}\n\nmain{\n  position: relative;\n  height: 100%;\n  width: 100%;\n  overflow: hidden;\n}\n\nheader,footer{\n  color: #ffffff;\n  background-color: #000000;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 3;\n}\n\n.logo{\n  font-family: cursive;\n  font-size: 3rem;\n  display: flex;\n  align-items: center;\n  gap: .5rem;\n}\n\n\nheader{\n  background-color: transparent;\n  position: sticky;\n  top: 0;\n}\n\n\n\n\n/* CLASS SELECTORS */\n\n.header ul{\n  display: flex;\n  align-items: center;\n  list-style: none;\n  gap: 3rem;\n  \n}\n\n.header ul li a{\n  color: #ffffff;\n  font-size: 1.25rem;\n}\n\n\n.home-container{\n  display: flex;\n  flex-direction: column;\n  gap: 50px;\n}\n\n.home-text{\n  color: #ffffff;\n\n}\n\n.home-btns{\n  display: flex;\n  justify-content: center;\n  gap: 1rem;\n}\n\n.btn{\n  width: fit-content;\n  padding: .5rem;\n  color: #ffffff;\n  background-color: #000000;\n  border: none;\n  cursor: pointer;\n}\n\n.home-container{\n  justify-content: left;\n  color: #ffffff;\n  padding: 10rem;\n}\n\n.text-container{\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  line-height: 1.5;\n}\n\n.fire-overlay{\n  position: absolute;\n  bottom: 5%;\n  right:7.5%;\n}\n\n.burger{\n  position: absolute;\n  bottom: -10%;\n  right: 7.5%;\n}\n\n.background-container img{\n  width:500px;\n}\n\n\n/* ID SELECTORS */\n\n#content{\n  display: grid;\n  grid-template-rows: 100px auto 75px;\n  height: 100%;\n}\n\n#home{\n  display: grid;\n  grid-template-columns: 1.5fr 1fr;\n  justify-items: center;\n  align-items: center;\n  height: 100%;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -698,6 +755,24 @@ module.exports = function (cssWithMappingToString) {
   return list;
 };
 
+/***/ }),
+/* 17 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "62f8e549bbc33d7e9fd7.png";
+
+/***/ }),
+/* 18 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "d74043e3e0987a122655.png";
+
+/***/ }),
+/* 19 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "1b20438efcd3d5b4414c.png";
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -724,6 +799,9 @@ module.exports = function (cssWithMappingToString) {
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
@@ -796,6 +874,32 @@ module.exports = function (cssWithMappingToString) {
 /******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
 /******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
 /******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			0: 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		// no on chunks loaded
+/******/ 		
+/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

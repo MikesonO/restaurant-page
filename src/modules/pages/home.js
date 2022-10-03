@@ -1,45 +1,67 @@
-import backgroundImage from '../../images/steak.jpeg';
+import steakImage from '../../images/burger.png';
+import fireOverlay from '../../images/fire.png';
 
 function createHome(){
   const home = document.createElement("div");
   home.setAttribute("id","home");
 
-  home.appendChild(createBackground());
+  home.append(createHomeContent(),createBackground());
 
   return home
 }
 
 function createBackground(){
   const backgroundContainer = document.createElement("div");
-  const background = document.createElement("img");
+  const burger = document.createElement("img");
+  const fire = document.createElement("img")
 
   backgroundContainer.classList.add("background-container");
-  background.setAttribute("src",backgroundImage);
-  background.setAttribute("alt", "Image of Steak");
+  burger.setAttribute("src",steakImage);
+  fire.setAttribute("src",fireOverlay);
+  burger.setAttribute("alt", "Image of Steak");
+  burger.setAttribute("class","burger");
+  fire.setAttribute("alt", "Image of Fire");
+  fire.setAttribute("class", "fire-overlay");
   
-  backgroundContainer.appendChild(background);
-  backgroundContainer.appendChild(createHomeContent());
+  backgroundContainer.append(burger,fire);
 
   return backgroundContainer;
 }
 
 function createHomeContent(){
   const homeContainer = document.createElement("div");
+  const textContainer = document.createElement("div");
   const homeText = document.createElement("h1");
+  const detailText = document.createElement("p");
+
+  homeContainer.setAttribute("class","home-container");
+  textContainer.setAttribute("class", "text-container");
+  homeText.setAttribute("class","home-text");
+  homeText.textContent = "Gourmet. The way burgers should be.";
+  detailText.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
+  textContainer.append(homeText, detailText)
+  homeContainer.append(textContainer, createHomeButtons());
+  
+  return homeContainer;
+}
+
+
+function createHomeButtons(){
+  const buttons = document.createElement("div");
   const bookTableBtn = document.createElement("button");
   const viewMenuBtn = document.createElement("button");
 
-  homeContainer.setAttribute("class","home-container")
-  homeText.textContent = "London's Premium and Authentic SteakHouse"
+  buttons.setAttribute("class","home-btns");
+  bookTableBtn.setAttribute("class","book-btn btn");
+  viewMenuBtn.setAttribute("class","view-btn btn");
+
   bookTableBtn.textContent = "Book a Table";
   viewMenuBtn.textContent = "View Menu";
-  bookTableBtn.setAttribute("class","book-btn");
-  viewMenuBtn.setAttribute("class","view-btn");
 
+  buttons.append(bookTableBtn,viewMenuBtn);
 
-  homeContainer.append(homeText, bookTableBtn,viewMenuBtn);
-  
-  return homeContainer;
+  return buttons;
 }
 
 

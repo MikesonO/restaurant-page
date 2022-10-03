@@ -1,3 +1,141 @@
+/* VARIABLES */
+
+
+/* ELEMENT SELECTORS */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
 body{
-  background-color: red;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  background-image: url("../images/brick-background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+main{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+header,footer{
+  color: #ffffff;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.logo{
+  font-family: cursive;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+
+header{
+  background-color: transparent;
+  position: sticky;
+  top: 0;
+}
+
+
+
+
+/* CLASS SELECTORS */
+
+.header ul{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 3rem;
+  
+}
+
+.header ul li a{
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+
+.home-container{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.home-text{
+  color: #ffffff;
+
+}
+
+.home-btns{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn{
+  width: fit-content;
+  padding: .5rem;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  cursor: pointer;
+}
+
+.home-container{
+  justify-content: left;
+  color: #ffffff;
+  padding: 10rem;
+}
+
+.text-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  line-height: 1.5;
+}
+
+.fire-overlay{
+  position: absolute;
+  bottom: 5%;
+  right:7.5%;
+}
+
+.burger{
+  position: absolute;
+  bottom: -10%;
+  right: 7.5%;
+}
+
+.background-container img{
+  width:500px;
+}
+
+
+/* ID SELECTORS */
+
+#content{
+  display: grid;
+  grid-template-rows: 100px auto 75px;
+  height: 100%;
+}
+
+#home{
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
 }

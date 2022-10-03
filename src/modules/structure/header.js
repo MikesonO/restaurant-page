@@ -1,4 +1,4 @@
-import logoImg from '../../images/cow-icon.png';
+import logoImg from '../../images/burger-icon.png';
 
 function createHeader() {
 
@@ -72,7 +72,8 @@ function createHeader() {
       logoImage.setAttribute("src",logoImg);
       logoImage.setAttribute("width", "40px")
       logoImage.setAttribute("alt","Restaurant Logo")
-      logoText.textContent="Steak House";
+      logoText.textContent="Urban Burgers";
+      logoText.setAttribute("class","logo")
       logoLink.setAttribute("href","#");
 
       logoText.appendChild(logoImage);
