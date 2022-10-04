@@ -1,4 +1,4 @@
-import steakImage from '../../images/burger.png';
+import burgerImage from '../../images/burger.png';
 import fireOverlay from '../../images/fire.png';
 
 function createHome(){
@@ -17,9 +17,9 @@ function createBackground(){
   const fire = document.createElement("img")
 
   backgroundContainer.classList.add("background-container");
-  burger.setAttribute("src",steakImage);
+  burger.setAttribute("src",burgerImage);
   fire.setAttribute("src",fireOverlay);
-  burger.setAttribute("alt", "Image of Steak");
+  burger.setAttribute("alt", "Image of Burger");
   burger.setAttribute("class","burger");
   fire.setAttribute("alt", "Image of Fire");
   fire.setAttribute("class", "fire-overlay");
