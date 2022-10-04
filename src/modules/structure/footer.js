@@ -10,10 +10,11 @@ function createFooter() {
     const a = document.createElement("a");
     const github = document.createElement("i");
 
-    a.textContent = "MikesonO";
+    a.textContent = "Created by MikesonO  ";
 
     github.setAttribute("class","fa-brands fa-github")
     a.setAttribute("href","https://github.com/MikesonO/restaurant-page");
+    a.setAttribute("target","_blank");
 
     a.append(github);
     return a;

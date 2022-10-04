@@ -4,6 +4,7 @@
   --color1: #EEEEEE;
   --color2: #1E2022;
   --color3: #FFD369;
+  --black: #000000;
 }
 
 
@@ -29,7 +30,12 @@ main{
   position: relative;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+}
+
+header{
+  background-color: transparent;
+  position: sticky;
+  top: 0;
 }
 
 header,footer{
@@ -42,32 +48,17 @@ header,footer{
 
 
 footer{
-  background-image: linear-gradient(#00000000 , #000000 60%);
+  background-image: linear-gradient(#00000000 , var(--black) 60%);
 }
 
 footer a{
   color: var(--color1);
   position: relative;
   top: 20px;
-}
-.logo{
-  font-family: 'Lobster', cursive;
-  font-size: 3rem;
   display: flex;
-  align-items: center;
   gap: .5rem;
-  color: var(--color3);
-  text-shadow: 2px 2px 2px #000000
+  align-items: center;
 }
-
-
-header{
-  background-color: transparent;
-  position: sticky;
-  top: 0;
-}
-
-
 
 
 /* CLASS SELECTORS */
@@ -80,10 +71,25 @@ header{
   
 }
 
-.header ul li a{
+.links{
   color: var(--color1);
   font-size: 1.25rem;
 }
+
+.links.active{
+  color: var(--color3);
+}
+
+.logo{
+  font-family: 'Lobster', cursive;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--color1);
+  text-shadow: 2px 2px 2px var(--black)
+}
+
 
 
 .home-container{
@@ -155,6 +161,8 @@ header{
   position: absolute;
   bottom: -10%;
   right: 7.5%;
+  -webkit-filter: drop-shadow(5px 20px 10px var(--black));
+        filter: drop-shadow(5px 20px 10px var(--black));
 }
 
 .background-container img{
