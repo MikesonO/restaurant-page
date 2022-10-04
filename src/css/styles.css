@@ -71,14 +71,35 @@ footer a{
   
 }
 
+.header ul li{
+  position: relative;
+}
+
 .links{
   color: var(--color1);
   font-size: 1.25rem;
+  letter-spacing: 1px;
 }
 
 .links.active{
   color: var(--color3);
 }
+
+.links::after{
+  content: "";
+  position: absolute;
+  background-color: var(--color3);
+  height: 3px;
+  width: 0%;
+  left: 0;
+  bottom: 0;
+  transition: 0.25s;
+}
+
+.links:hover::after{
+  width: 100%;
+}
+
 
 .logo{
   font-family: 'Lobster', cursive;
