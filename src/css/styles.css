@@ -169,13 +169,53 @@ footer a{
   width:500px;
 }
 
+.menu-container{
+  width: fit-content;
+}
+.menu-heading{
+  color: var(--color3);
+  padding-bottom: 2rem;;
+}
+
+.burger-menu{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.burger-container{
+  color: var(--color1);
+  display: flex;
+  align-items: center;
+}
+
+
+.burger-price{
+  color: var(--color3);
+}
+
+
+.carousel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+.carousel-heading{
+  color: var(--color1);
+  font-size: 2.25rem;
+}
 
 
 .image-container{
   overflow-x: hidden;
-  max-width: 600px;
+  max-width: 350px;
   margin: 0 auto;
 }
+
 .image-wrapper{
   display: grid;
   grid-auto-flow: column;
@@ -213,4 +253,11 @@ footer a{
   justify-items: center;
   align-items: center;
   height: 100%;
+}
+
+#menu{
+  padding: 0 5rem;
+  justify-content: center;
+  gap: 2rem;
+  /* flex-wrap: wrap-reverse; */
 }

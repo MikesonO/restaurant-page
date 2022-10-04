@@ -23,7 +23,7 @@ export function navigation() {
     if (link.textContent == "Home") {
       document.getElementById("home").style.display = "grid";
     } else if (link.textContent == "Menu") {
-      document.getElementById("menu").style.display = "block";
+      document.getElementById("menu").style.display = "flex";
     } else if (link.textContent == "About") {
       document.getElementById("about").style.display = "block";
     } else if (link.textContent == "Contact") {
