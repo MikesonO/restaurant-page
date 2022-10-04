@@ -171,6 +171,11 @@ footer a{
 
 .menu-container{
   width: fit-content;
+  padding: 2rem;
+  background-color: #00000099;
+  border: 5px solid var(--color2);
+  border-radius: 25px;
+
 }
 .menu-heading{
   color: var(--color3);
@@ -256,7 +261,7 @@ footer a{
 }
 
 #menu{
-  padding: 0 5rem;
+  padding: 2rem 5rem 0;
   justify-content: center;
   gap: 2rem;
   /* flex-wrap: wrap-reverse; */
