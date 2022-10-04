@@ -139,12 +139,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _pages_home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
+/* harmony import */ var _pages_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(24);
+/* harmony import */ var _pages_about__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(25);
+/* harmony import */ var _pages_contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(26);
+
+
+
 
 
 function createMain() {
   const main = document.createElement("main");
 
-    main.appendChild(_pages_home__WEBPACK_IMPORTED_MODULE_0__["default"]);
+    main.append(_pages_home__WEBPACK_IMPORTED_MODULE_0__["default"],_pages_menu__WEBPACK_IMPORTED_MODULE_1__["default"], _pages_about__WEBPACK_IMPORTED_MODULE_2__["default"], _pages_contact__WEBPACK_IMPORTED_MODULE_3__["default"]);
     return main;
   }
 
@@ -168,6 +174,7 @@ __webpack_require__.r(__webpack_exports__);
 function createHome(){
   const home = document.createElement("div");
   home.setAttribute("id","home");
+  home.setAttribute("style","display: grid");
 
   home.append(createHomeContent(),createBackground());
 
@@ -6775,6 +6782,65 @@ module.exports = __webpack_require__.p + "04535cb2ec0024f0d9ae.jpg";
 
 }());
 
+
+/***/ }),
+/* 24 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function createMenu(){
+  const menu = document.createElement("div");
+  menu.setAttribute("id","menu");
+  menu.setAttribute("style","display: none");
+
+  return menu;
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createMenu());
+
+
+
+/***/ }),
+/* 25 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function createAbout(){
+  const about = document.createElement("div");
+  about.setAttribute("id","about");
+  about.setAttribute("style","display: none");
+
+  return about;
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createAbout());
+
+
+/***/ }),
+/* 26 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function createContact(){
+  const contact = document.createElement("div");
+  contact.setAttribute("id","contact");
+  contact.setAttribute("style","display: none");
+
+  return contact;
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createContact());
 
 /***/ })
 /******/ 	]);
