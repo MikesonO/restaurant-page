@@ -37,13 +37,14 @@ function createHeader() {
     return links;
   };
 
-   //Create Home Nav-Item
+  //Create Home Nav-Item
   function createHomeLink() {
     const home = document.createElement("li");
     const homeLink = document.createElement("a");
 
     homeLink.textContent = "Home";
-    homeLink.setAttribute("href","#");
+    homeLink.setAttribute("href", "#");
+    homeLink.setAttribute("class", "links active");
 
     home.appendChild(homeLink);
     return home;
@@ -55,10 +56,32 @@ function createHeader() {
     const menuLink = document.createElement("a");
 
     menuLink.textContent = "Menu";
-    menuLink.setAttribute("href","#");
+    menuLink.setAttribute("href", "#");
+    menuLink.setAttribute("class", "links");
 
     menu.appendChild(menuLink);
     return menu;
+  }
+
+  //Create Logo Nav-Item
+  function createLogoLink() {
+    const logo = document.createElement("li");
+    const logoLink = document.createElement("a");
+    const logoText = document.createElement("h1");
+    const logoImage = document.createElement("img");
+
+    logoImage.setAttribute("src", _images_burger_icon_png__WEBPACK_IMPORTED_MODULE_0__);
+    logoImage.setAttribute("width", "40px");
+    logoImage.setAttribute("alt", "Restaurant Logo");
+    logoText.textContent = "Urban Burgers";
+    logoText.setAttribute("class", "logo");
+    logoLink.setAttribute("href", "#");
+    logoLink.setAttribute("class", "logo-link");
+
+    logoText.appendChild(logoImage);
+    logoLink.appendChild(logoText);
+    logo.appendChild(logoLink);
+    return logo;
   }
 
   //Create About Nav-Item
@@ -67,33 +90,13 @@ function createHeader() {
     const aboutLink = document.createElement("a");
 
     aboutLink.textContent = "About";
-    aboutLink.setAttribute("href","#");
+    aboutLink.setAttribute("href", "#");
+    aboutLink.setAttribute("class", "links");
 
     about.appendChild(aboutLink);
     return about;
   }
 
-
-    //Create Logo Nav-Item
-    function createLogoLink() {
-      const logo = document.createElement("li");
-      const logoLink = document.createElement("a");
-      const logoText = document.createElement("h1");
-      const logoImage = document.createElement("img");
-
-      logoImage.setAttribute("src",_images_burger_icon_png__WEBPACK_IMPORTED_MODULE_0__);
-      logoImage.setAttribute("width", "40px")
-      logoImage.setAttribute("alt","Restaurant Logo")
-      logoText.textContent="Urban Burgers";
-      logoText.setAttribute("class","logo")
-      logoLink.setAttribute("href","#");
-
-      logoText.appendChild(logoImage);
-      logoLink.appendChild(logoText);
-      logo.appendChild(logoLink);
-      return logo;
-    }
-  
 
   //Create Contact Link
   function createContactLink() {
@@ -101,7 +104,8 @@ function createHeader() {
 
     const contactLink = document.createElement("a");
     contactLink.textContent = "Contact";
-    contactLink.setAttribute("href","#");
+    contactLink.setAttribute("href", "#");
+    contactLink.setAttribute("class", "links");
 
     contact.appendChild(contactLink);
     return contact;
@@ -109,6 +113,12 @@ function createHeader() {
 
   return createHeader();
 }
+
+
+
+
+
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createHeader());
 
@@ -256,10 +266,11 @@ function createFooter() {
     const a = document.createElement("a");
     const github = document.createElement("i");
 
-    a.textContent = "MikesonO";
+    a.textContent = "Created by MikesonO  ";
 
     github.setAttribute("class","fa-brands fa-github")
     a.setAttribute("href","https://github.com/MikesonO/restaurant-page");
+    a.setAttribute("target","_blank");
 
     a.append(github);
     return a;
@@ -630,7 +641,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* VARIABLES */\n:root{\n  --color1: #EEEEEE;\n  --color2: #1E2022;\n  --color3: #FFD369;\n}\n\n\n/* ELEMENT SELECTORS */\n*{\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n  text-decoration: none;\n}\n\nbody{\n  width: 100vw;\n  height: 100vh;\n  background-color: var(--color2);\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-position: center;\n  background-size: cover;\n  font-family: 'Poppins', sans-serif;\n}\n\nmain{\n  position: relative;\n  height: 100%;\n  width: 100%;\n  overflow: hidden;\n}\n\nheader,footer{\n  color: var(--color1);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 3;\n}\n\n\nfooter{\n  background-image: linear-gradient(#00000000 , #000000 60%);\n}\n\nfooter a{\n  color: var(--color1);\n  position: relative;\n  top: 20px;\n}\n.logo{\n  font-family: 'Lobster', cursive;\n  font-size: 3rem;\n  display: flex;\n  align-items: center;\n  gap: .5rem;\n  color: var(--color3);\n  text-shadow: 2px 2px 2px #000000\n}\n\n\nheader{\n  background-color: transparent;\n  position: sticky;\n  top: 0;\n}\n\n\n\n\n/* CLASS SELECTORS */\n\n.header ul{\n  display: flex;\n  align-items: center;\n  list-style: none;\n  gap: 3rem;\n  \n}\n\n.header ul li a{\n  color: var(--color1);\n  font-size: 1.25rem;\n}\n\n\n.home-container{\n  display: flex;\n  flex-direction: column;\n  gap: 75px;\n}\n\n.home-text{\n  font-size: 3rem;\n  color: #E8E8E8;\n\n}\n\n.home-text span{\n  color: var(--color3);\n  text-decoration: underline;\n}\n\n.home-btns{\n  display: flex;\n  gap: 2rem;\n  padding: 0 2.5rem;\n}\n\n.btn{\n  padding: .5rem 1rem; \n  background-color: var(--color2);\n  border: none;\n  cursor: pointer;\n  font-size: 1.25rem;\n  border-radius: 20px;\n}\n\n.book-btn{\n  background-color: transparent;\n  border: 2px solid var(--color3);\n  color: var(--color3);\n}\n\n.view-btn{\n  background-color: var(--color3);\n  color: var(--color2);\n  border: 2px solid var(--color3);\n}\n\n.home-container{\n  justify-content: left;\n  color: var(--color1);\n  width: 525px;\n  padding: 2rem;\n  border-radius: 20px;\n}\n\n.text-container{\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  line-height: 1.5;\n}\n\n.fire-overlay{\n  position: absolute;\n  bottom: 5%;\n  right:7.5%;\n}\n\n.burger{\n  position: absolute;\n  bottom: -10%;\n  right: 7.5%;\n}\n\n.background-container img{\n  width:500px;\n}\n\n\n/* ID SELECTORS */\n\n#content{\n  display: grid;\n  grid-template-rows: 100px auto 75px;\n  height: 100%;\n}\n\n#home{\n  display: grid;\n  grid-template-columns: 1.5fr 1fr;\n  justify-items: center;\n  align-items: center;\n  height: 100%;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* VARIABLES */\n:root{\n  --color1: #EEEEEE;\n  --color2: #1E2022;\n  --color3: #FFD369;\n  --black: #000000;\n}\n\n\n/* ELEMENT SELECTORS */\n*{\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n  text-decoration: none;\n}\n\nbody{\n  width: 100vw;\n  height: 100vh;\n  background-color: var(--color2);\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-position: center;\n  background-size: cover;\n  font-family: 'Poppins', sans-serif;\n}\n\nmain{\n  position: relative;\n  height: 100%;\n  width: 100%;\n}\n\nheader{\n  background-color: transparent;\n  position: sticky;\n  top: 0;\n}\n\nheader,footer{\n  color: var(--color1);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 3;\n}\n\n\nfooter{\n  background-image: linear-gradient(#00000000 , var(--black) 60%);\n}\n\nfooter a{\n  color: var(--color1);\n  position: relative;\n  top: 20px;\n  display: flex;\n  gap: .5rem;\n  align-items: center;\n}\n\n\n/* CLASS SELECTORS */\n\n.header ul{\n  display: flex;\n  align-items: center;\n  list-style: none;\n  gap: 3rem;\n  \n}\n\n.links{\n  color: var(--color1);\n  font-size: 1.25rem;\n}\n\n.links.active{\n  color: var(--color3);\n}\n\n.logo{\n  font-family: 'Lobster', cursive;\n  font-size: 3rem;\n  display: flex;\n  align-items: center;\n  gap: .5rem;\n  color: var(--color1);\n  text-shadow: 2px 2px 2px var(--black)\n}\n\n\n\n.home-container{\n  display: flex;\n  flex-direction: column;\n  gap: 75px;\n}\n\n.home-text{\n  font-size: 3rem;\n  color: #E8E8E8;\n\n}\n\n.home-text span{\n  color: var(--color3);\n  text-decoration: underline;\n}\n\n.home-btns{\n  display: flex;\n  gap: 2rem;\n  padding: 0 2.5rem;\n}\n\n.btn{\n  padding: .5rem 1rem; \n  background-color: var(--color2);\n  border: none;\n  cursor: pointer;\n  font-size: 1.25rem;\n  border-radius: 20px;\n}\n\n.book-btn{\n  background-color: transparent;\n  border: 2px solid var(--color3);\n  color: var(--color3);\n}\n\n.view-btn{\n  background-color: var(--color3);\n  color: var(--color2);\n  border: 2px solid var(--color3);\n}\n\n.home-container{\n  justify-content: left;\n  color: var(--color1);\n  width: 525px;\n  padding: 2rem;\n  border-radius: 20px;\n}\n\n.text-container{\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  line-height: 1.5;\n}\n\n.fire-overlay{\n  position: absolute;\n  bottom: 5%;\n  right:7.5%;\n}\n\n.burger{\n  position: absolute;\n  bottom: -10%;\n  right: 7.5%;\n  -webkit-filter: drop-shadow(5px 20px 10px var(--black));\n        filter: drop-shadow(5px 20px 10px var(--black));\n}\n\n.background-container img{\n  width:500px;\n}\n\n\n/* ID SELECTORS */\n\n#content{\n  display: grid;\n  grid-template-rows: 100px auto 75px;\n  height: 100%;\n}\n\n#home{\n  display: grid;\n  grid-template-columns: 1.5fr 1fr;\n  justify-items: center;\n  align-items: center;\n  height: 100%;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6927,6 +6938,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function pageLoad() {
   const content = document.getElementById("content");
   console.log(content);
@@ -6936,7 +6948,39 @@ function pageLoad() {
     _modules_structure_main__WEBPACK_IMPORTED_MODULE_1__["default"],
     _modules_structure_footer__WEBPACK_IMPORTED_MODULE_2__["default"]
   )
-  
+
+  const links = document.querySelectorAll(".header ul li a");
+  links.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (!link.classList.contains("logo-link")) {
+        display(link);
+        links.forEach((link) => link.classList.remove("active"));
+        link.classList.add("active");
+      } else {
+        location.reload();
+      }
+
+
+    });
+  });
+
+  function display(link) {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("about").style.display = "none";
+    document.getElementById("contact").style.display = "none";
+
+    if (link.textContent == "Home") {
+      document.getElementById("home").style.display = "grid";
+    } else if (link.textContent == "Menu") {
+      document.getElementById("menu").style.display = "block";
+    } else if (link.textContent == "About") {
+      document.getElementById("about").style.display = "block";
+    } else if (link.textContent == "Contact") {
+      document.getElementById("contact").style.display = "block";
+    }
+  }
+
 }
 
 pageLoad();
