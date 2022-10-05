@@ -4,7 +4,7 @@ function createContact() {
   contact.setAttribute("style", "display: none");
 
 
-  contact.append(contactInfo())
+  contact.append(contactInfo(), contactForm())
 
   return contact;
 }
@@ -83,11 +83,38 @@ function contactInfo() {
 }
 
 function contactForm() {
-  //Hit us up!
+  const formContainer = document.createElement("div");
+  const formTitle = document.createElement("h1");
+  const inputName = document.createElement("input");
+  const inputEmail = document.createElement("input");
+  const inputMessage = document.createElement("textArea");
+  const sendButton = document.createElement("button");
+
+  formTitle.textContent = "Contact Us!";
+  //Name Input
+  inputName.setAttribute("type","text");
+  inputName.setAttribute("name","customer-name");
+  inputName.setAttribute("placeholder","Name");
+
+  //Email Input
+  inputEmail.setAttribute("type","text");
+  inputEmail.setAttribute("name","customer-email");
+  inputEmail.setAttribute("placeholder","Email");
+
+  //Message Input
+  inputMessage.setAttribute("name","customer-message");
+  inputMessage.setAttribute("placeholder","Subject");
+
+
+  //Send Button
+  sendButton.textContent = "Send"
+  sendButton.setAttribute("class","send-btn");
+
+  //Hit Us Up!
+
+  formContainer.setAttribute("class","form-container");
+  formContainer.append(formTitle, inputName, inputEmail, inputMessage, sendButton);
+  return formContainer;
 }
-
-// function maps(){
-
-// }
 
 export default createContact();

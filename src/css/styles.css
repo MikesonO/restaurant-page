@@ -342,6 +342,17 @@ footer a {
 
 }
 
+.form-container{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  color: var(--color1);
+  padding: 2rem;
+  background-color: #00000099;
+  border: 5px solid var(--color2);
+  border-radius: 25px;
+}
+
 
 /* ID SELECTORS */
 
@@ -373,6 +384,11 @@ footer a {
   align-items: baseline;
   width: 100%;
   height: 100%;
+}
+
+#contact{
+  padding: 2rem 5rem 0;
+  grid-template-columns: 1fr 1fr;
 }
 
 #home,
