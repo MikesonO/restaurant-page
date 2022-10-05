@@ -25,7 +25,7 @@ export function navigation() {
     } else if (link.textContent == "Menu") {
       document.getElementById("menu").style.display = "flex";
     } else if (link.textContent == "About") {
-      document.getElementById("about").style.display = "block";
+      document.getElementById("about").style.display = "flex";
     } else if (link.textContent == "Contact") {
       document.getElementById("contact").style.display = "block";
     }
