@@ -28,7 +28,7 @@ function burgers(){
     createBurger("Chick 'N' Licking", "£8.99"),
     createBurger("Burgerlicious", "£7.99"),
     createBurger("The Burgery", "£7.99"),
-    createBurger("Buns 'N' Salad", "£6.49")
+    createBurger("Buns 'N' Salad (Vegan)", "£6.49")
     )
 
     burgers.append(heading, burgerMenu);
@@ -85,12 +85,11 @@ function createCarousel(){
   food4.setAttribute("class","carousel-image");
 
 
-
   imageWrapper.append(
-    createDivs(food1),
-    createDivs(food2),
-    createDivs(food3),
-    createDivs(food4)
+    createDivs(food1, "Chick 'N' Licking"),
+    createDivs(food2, "Burgerlicious"),
+    createDivs(food3, "The Burgery"),
+    createDivs(food4, "Buns 'N' Salad (Vegan)")
   )
 
   imageContainer.appendChild(imageWrapper);
@@ -99,9 +98,15 @@ function createCarousel(){
   return carousel;
 }
 
-function createDivs(image){
+function createDivs(image, foodName){
   const div = document.createElement("div");
-  div.appendChild(image);
+  const name = document.createElement("h2");
+  name.textContent = foodName;
+  name.setAttribute("class","food-name");
+  div.style.position = "relative";
+  name.style.position = "absolute";
+  name.style.zIndex = "1";
+  div.append(name, image);
 
   return div;
 }

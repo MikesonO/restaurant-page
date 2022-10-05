@@ -2,11 +2,11 @@ export function navigation() {
   const links = document.querySelectorAll(".header ul li a");
   links.forEach((link) => {
     link.addEventListener('click', () => {
-      if (!link.classList.contains("logo-link")) {
+      if (!link.classList.contains("logo-link")) { //Adds active class to link clicked and displays page.
         display(link);
         links.forEach((link) => link.classList.remove("active"));
         link.classList.add("active");
-      } else {
+      } else { //Reload Page when logo is pressed
         location.reload();
       }
 
@@ -31,3 +31,4 @@ export function navigation() {
     }
   }
 }
+

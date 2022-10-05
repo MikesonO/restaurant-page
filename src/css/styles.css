@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* VARIABLES */
-:root{
+:root {
   --color1: #EEEEEE;
   --color2: #1E2022;
   --color3: #FFD369;
@@ -9,14 +10,14 @@
 
 
 /* ELEMENT SELECTORS */
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
 }
 
-body{
+body {
   width: 100vw;
   height: 100vh;
   background-color: var(--color2);
@@ -26,19 +27,20 @@ body{
   font-family: 'Poppins', sans-serif;
 }
 
-main{
+main {
   position: relative;
   height: 100%;
   width: 100%;
 }
 
-header{
+header {
   background-color: transparent;
   position: sticky;
   top: 0;
 }
 
-header,footer{
+header,
+footer {
   color: var(--color1);
   display: flex;
   justify-content: center;
@@ -47,11 +49,11 @@ header,footer{
 }
 
 
-footer{
-  background-image: linear-gradient(#00000000 , var(--black) 60%);
+footer {
+  background-image: linear-gradient(#00000000, var(--black) 60%);
 }
 
-footer a{
+footer a {
   color: var(--color1);
   position: relative;
   top: 20px;
@@ -63,29 +65,29 @@ footer a{
 
 /* CLASS SELECTORS */
 
-.header ul{
+.header ul {
   display: flex;
   align-items: center;
   list-style: none;
   gap: 3rem;
-  
+
 }
 
-.header ul li{
+.header ul li {
   position: relative;
 }
 
-.links{
+.links {
   color: var(--color1);
   font-size: 1.25rem;
   letter-spacing: 1px;
 }
 
-.links.active{
+.links.active {
   color: var(--color3);
 }
 
-.links::after{
+.links::after {
   content: "";
   position: absolute;
   background-color: var(--color3);
@@ -96,48 +98,48 @@ footer a{
   transition: 0.25s;
 }
 
-.links:hover::after{
+.links:hover::after {
   width: 100%;
 }
 
 
-.logo{
+.logo {
   font-family: 'Lobster', cursive;
   font-size: 3rem;
   display: flex;
   align-items: center;
   gap: .5rem;
   color: var(--color1);
-  text-shadow: 2px 2px 2px var(--black)
+  text-shadow: 2px 2px 2px var(--black);
 }
 
 
 
-.home-container{
+.home-container {
   display: flex;
   flex-direction: column;
   gap: 75px;
 }
 
-.home-text{
+.home-text {
   font-size: 3rem;
   color: #E8E8E8;
 
 }
 
-.home-text span{
+.home-text span {
   color: var(--color3);
   text-decoration: underline;
 }
 
-.home-btns{
+.home-btns {
   display: flex;
   gap: 2rem;
   padding: 0 2.5rem;
 }
 
-.btn{
-  padding: .5rem 1rem; 
+.btn {
+  padding: .5rem 1rem;
   background-color: var(--color2);
   border: none;
   cursor: pointer;
@@ -145,19 +147,19 @@ footer a{
   border-radius: 20px;
 }
 
-.book-btn{
+.book-btn {
   background-color: transparent;
   border: 2px solid var(--color3);
   color: var(--color3);
 }
 
-.view-btn{
+.view-btn {
   background-color: var(--color3);
   color: var(--color2);
   border: 2px solid var(--color3);
 }
 
-.home-container{
+.home-container {
   justify-content: left;
   color: var(--color1);
   width: 525px;
@@ -165,32 +167,32 @@ footer a{
   border-radius: 20px;
 }
 
-.text-container{
+.text-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   line-height: 1.5;
 }
 
-.fire-overlay{
+.fire-overlay {
   position: absolute;
   bottom: 5%;
-  right:7.5%;
+  right: 7.5%;
 }
 
-.burger{
+.burger {
   position: absolute;
   bottom: -10%;
   right: 7.5%;
   -webkit-filter: drop-shadow(5px 20px 10px var(--black));
-        filter: drop-shadow(5px 20px 10px var(--black));
+  filter: drop-shadow(5px 20px 10px var(--black));
 }
 
-.background-container img{
-  width:500px;
+.background-container img {
+  width: 500px;
 }
 
-.menu-container{
+.menu-container {
   width: fit-content;
   padding: 2rem;
   background-color: #00000099;
@@ -198,31 +200,33 @@ footer a{
   border-radius: 25px;
 
 }
-.menu-heading{
+
+.menu-heading {
   color: var(--color3);
-  padding-bottom: 2rem;;
+  padding-bottom: 2rem;
+  ;
 }
 
-.burger-menu{
+.burger-menu {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
 }
 
-.burger-container{
+.burger-container {
   color: var(--color1);
   display: flex;
   align-items: center;
 }
 
 
-.burger-price{
+.burger-price {
   color: var(--color3);
 }
 
 
-.carousel{
+.carousel {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -230,19 +234,19 @@ footer a{
   width: fit-content;
 }
 
-.carousel-heading{
+.carousel-heading {
   color: var(--color1);
   font-size: 2.25rem;
 }
 
 
-.image-container{
+.image-container {
   overflow-x: hidden;
   max-width: 350px;
   margin: 0 auto;
 }
 
-.image-wrapper{
+.image-wrapper {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view));
@@ -252,38 +256,73 @@ footer a{
   transition: .3s;
 }
 
-.image-wrapper div{
+.image-wrapper div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.carousel-image{
+.food-name {
+  color: var(--color1);
+  text-shadow: 2px 2px 2px var(--black);
+  top: 0;
+}
+
+.carousel-image {
   width: 100%;
   object-fit: cover;
   display: block;
+  animation: inAndOut;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
 
 
 /* ID SELECTORS */
 
-#content{
+#content {
   display: grid;
   grid-template-rows: 100px auto 75px;
   height: 100%;
 }
 
-#home{
+#home {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   justify-items: center;
   align-items: center;
   height: 100%;
+  animation: transitionIn 0.75s;
 }
 
-#menu{
+#menu {
   padding: 2rem 5rem 0;
   justify-content: center;
   gap: 2rem;
+  animation: transitionIn 0.75s;
   /* flex-wrap: wrap-reverse; */
+}
+
+/* ANIMATIONS */
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+
+@keyframes inAndOut {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.05
+  }
 }
