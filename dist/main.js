@@ -648,7 +648,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);"]);
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* VARIABLES */\n:root {\n  --color1: #EEEEEE;\n  --color2: #1E2022;\n  --color3: #FFD369;\n  --black: #000000;\n}\n\n\n/* ELEMENT SELECTORS */\n* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n  text-decoration: none;\n}\n\nbody {\n  width: 100vw;\n  height: 100vh;\n  background-color: var(--black);\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-position: center;\n  background-size: cover;\n  font-family: 'Poppins', sans-serif;\n}\n\nmain {\n  position: relative;\n  height: 100%;\n  width: 100%;\n}\n\nheader {\n  background-color: transparent;\n  position: sticky;\n  top: 0;\n}\n\nheader,\nfooter {\n  color: var(--color1);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 3;\n}\n\n\nfooter {\n  background-image: linear-gradient(#00000000, var(--black) 60%);\n}\n\nfooter a {\n  color: var(--color1);\n  position: relative;\n  top: 20px;\n  display: flex;\n  gap: .5rem;\n  align-items: center;\n}\n\n\n/* CLASS SELECTORS */\n\n.header ul {\n  display: flex;\n  align-items: center;\n  list-style: none;\n  gap: 3rem;\n\n}\n\n.header ul li {\n  position: relative;\n}\n\n.links {\n  color: var(--color1);\n  font-size: 1.25rem;\n  letter-spacing: 1px;\n}\n\n.links.active {\n  color: var(--color3);\n}\n\n.links::after {\n  content: \"\";\n  position: absolute;\n  background-color: var(--color3);\n  height: 3px;\n  width: 0%;\n  left: 0;\n  bottom: 0;\n  transition: 0.25s;\n}\n\n.links:hover::after {\n  width: 100%;\n}\n\n\n.logo {\n  font-family: 'Lobster', cursive;\n  font-size: 3rem;\n  display: flex;\n  align-items: center;\n  gap: .5rem;\n  color: var(--color1);\n  text-shadow: 2px 2px 2px var(--black);\n}\n\n\n\n.home-container {\n  display: flex;\n  flex-direction: column;\n  gap: 75px;\n}\n\n.home-text {\n  font-size: 3rem;\n  color: #E8E8E8;\n\n}\n\n.home-text span {\n  color: var(--color3);\n  text-decoration: underline;\n}\n\n.home-btns {\n  display: flex;\n  gap: 2rem;\n}\n\n.btn {\n  padding: .5rem 1rem;\n  background-color: var(--color2);\n  border: none;\n  cursor: pointer;\n  font-size: 1.25rem;\n  border-radius: 20px;\n}\n\n.book-btn {\n  background-color: transparent;\n  border: 2px solid var(--color3);\n  color: var(--color3);\n}\n\n.view-btn {\n  background-color: var(--color3);\n  color: var(--color2);\n  border: 2px solid var(--color3);\n}\n\n.home-container {\n  justify-content: left;\n  color: var(--color1);\n  width: 525px;\n  padding: 2rem;\n  border-radius: 20px;\n}\n\n.text-container {\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  line-height: 1.5;\n}\n\n.fire-overlay {\n  position: absolute;\n  bottom: 5%;\n  right: 7.5%;\n}\n\n.burger {\n  position: absolute;\n  bottom: -10%;\n  right: 7.5%;\n  -webkit-filter: drop-shadow(5px 20px 10px var(--black));\n  filter: drop-shadow(5px 20px 10px var(--black));\n}\n\n.background-container img {\n  width: 500px;\n}\n\n.menu-container {\n  width: fit-content;\n  padding: 2rem;\n  background-color: #00000099;\n  border: 5px solid var(--color2);\n  border-radius: 25px;\n\n}\n\n.menu-heading {\n  color: var(--color3);\n  padding-bottom: 2rem;\n  ;\n}\n\n.burger-menu {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));\n  grid-template-rows: repeat(2, 1fr);\n  gap: 2rem;\n}\n\n.burger-container {\n  color: var(--color1);\n  display: flex;\n  align-items: center;\n}\n\n\n.burger-price {\n  color: var(--color3);\n}\n\n\n.carousel {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: fit-content;\n}\n\n.carousel-heading {\n  color: var(--color1);\n  font-size: 2.25rem;\n}\n\n\n.image-container {\n  overflow-x: hidden;\n  max-width: 350px;\n  margin: 0 auto;\n}\n\n.image-wrapper {\n  display: grid;\n  grid-auto-flow: column;\n  grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view));\n  grid-gap: 1.5rem;\n  position: relative;\n  left: 0;\n  transition: .3s;\n}\n\n.image-wrapper div {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.food-name {\n  color: var(--color1);\n  text-shadow: 2px 2px 2px var(--black);\n  top: 0;\n}\n\n.carousel-image {\n  width: 100%;\n  object-fit: cover;\n  display: block;\n  animation: inAndOut;\n  animation-duration: 1.5s;\n  animation-iteration-count: infinite;\n}\n\n.about-container{\n  color: var(--color1);\n  width: 60vw;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 2rem;\n  background-color: #00000099;\n  border: 5px solid var(--color2);\n  border-radius: 25px;\n  gap: 2rem;\n}\n\n.about-title{\n  color:var(--color3);\n  text-transform: uppercase;\n}\n\n.about-heading{\n  padding-bottom: 1rem;\n  color: var(--color3);\n}\n\n.about-text-container,\n.about-paragraph{\n  display: flex;\n  flex-direction: column;\n  gap: 1.5rem;\n}\n\n/* ID SELECTORS */\n\n#content {\n  display: grid;\n  grid-template-rows: 100px auto 75px;\n  height: 100%;\n}\n\n#home {\n  display: grid;\n  grid-template-columns: 1.5fr 1fr;\n  justify-items: center;\n  align-items: center;\n  height: 100%;\n}\n\n#menu {\n  padding: 2rem 5rem 0;\n  justify-content: center;\n  gap: 2rem;\n  \n  /* flex-wrap: wrap-reverse; */\n}\n\n#about{\n  padding: 2rem 5rem 0;\n  justify-content: center;\n  align-items: baseline;\n  width: 100%;\n  height: 100%;\n}\n\n#home,\n#menu,\n#about,\n#contact{\n  animation: transitionIn 0.75s;\n}\n\n/* ANIMATIONS */\n@keyframes transitionIn {\n  from {\n    opacity: 0;\n    transform: rotateX(-10deg);\n  }\n\n  to {\n    opacity: 1;\n    transform: rotateX(0);\n  }\n}\n\n\n@keyframes inAndOut {\n  0% {\n    scale: 1;\n  }\n\n  50% {\n    scale: 1.05\n  }\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* VARIABLES */\n:root {\n  --color1: #EEEEEE;\n  --color2: #1E2022;\n  --color3: #FFD369;\n  --black: #000000;\n}\n\n\n/* ELEMENT SELECTORS */\n* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n  text-decoration: none;\n}\n\nbody {\n  width: 100vw;\n  height: 100vh;\n  background-color: var(--black);\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n  background-position: center;\n  background-size: cover;\n  font-family: 'Poppins', sans-serif;\n}\n\nmain {\n  position: relative;\n  height: 100%;\n  width: 100%;\n}\n\nheader {\n  background-color: transparent;\n  position: sticky;\n  top: 0;\n}\n\nheader,\nfooter {\n  color: var(--color1);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 3;\n}\n\n\nfooter {\n  background-image: linear-gradient(#00000000, var(--black) 60%);\n}\n\nfooter a {\n  color: var(--color1);\n  position: relative;\n  top: 20px;\n  display: flex;\n  gap: .5rem;\n  align-items: center;\n}\n\n\n/* CLASS SELECTORS */\n\n.header ul {\n  display: flex;\n  align-items: center;\n  list-style: none;\n  gap: 3rem;\n\n}\n\n.header ul li {\n  position: relative;\n}\n\n.links {\n  color: var(--color1);\n  font-size: 1.25rem;\n  letter-spacing: 1px;\n}\n\n.links.active {\n  color: var(--color3);\n}\n\n.links::after {\n  content: \"\";\n  position: absolute;\n  background-color: var(--color3);\n  height: 3px;\n  width: 0%;\n  left: 0;\n  bottom: 0;\n  transition: 0.25s;\n}\n\n.links:hover::after {\n  width: 100%;\n}\n\n\n.logo {\n  font-family: 'Lobster', cursive;\n  font-size: 3rem;\n  display: flex;\n  align-items: center;\n  gap: .5rem;\n  color: var(--color1);\n  text-shadow: 2px 2px 2px var(--black);\n}\n\n\n\n.home-container {\n  display: flex;\n  flex-direction: column;\n  gap: 75px;\n}\n\n.home-text {\n  font-size: 3rem;\n  color: #E8E8E8;\n\n}\n\n.home-text span {\n  color: var(--color3);\n  text-decoration: underline;\n}\n\n.home-btns {\n  display: flex;\n  gap: 2rem;\n}\n\n.btn {\n  padding: .5rem 1rem;\n  background-color: var(--color2);\n  border: none;\n  cursor: pointer;\n  font-size: 1.25rem;\n  border-radius: 20px;\n}\n\n.book-btn {\n  background-color: transparent;\n  border: 2px solid var(--color3);\n  color: var(--color3);\n}\n\n.view-btn {\n  background-color: var(--color3);\n  color: var(--color2);\n  border: 2px solid var(--color3);\n}\n\n.home-container {\n  justify-content: left;\n  color: var(--color1);\n  width: 525px;\n  padding: 2rem;\n  border-radius: 20px;\n}\n\n.text-container {\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  line-height: 1.5;\n}\n\n.fire-overlay {\n  position: absolute;\n  bottom: 5%;\n  right: 7.5%;\n}\n\n.burger {\n  position: absolute;\n  bottom: -10%;\n  right: 7.5%;\n  -webkit-filter: drop-shadow(5px 20px 10px var(--black));\n  filter: drop-shadow(5px 20px 10px var(--black));\n}\n\n.background-container img {\n  width: 500px;\n}\n\n.menu-container {\n  width: fit-content;\n  padding: 2rem;\n  background-color: #00000099;\n  border: 5px solid var(--color2);\n  border-radius: 25px;\n\n}\n\n.menu-heading {\n  color: var(--color3);\n  padding-bottom: 2rem;\n  ;\n}\n\n.burger-menu {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));\n  grid-template-rows: repeat(2, 1fr);\n  gap: 2rem;\n}\n\n.burger-container {\n  color: var(--color1);\n  display: flex;\n  align-items: center;\n}\n\n\n.burger-price {\n  color: var(--color3);\n}\n\n\n.carousel {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: fit-content;\n}\n\n.carousel-heading {\n  color: var(--color1);\n  font-size: 2.25rem;\n}\n\n\n.image-container {\n  overflow-x: hidden;\n  max-width: 350px;\n  margin: 0 auto;\n}\n\n.image-wrapper {\n  display: grid;\n  grid-auto-flow: column;\n  grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view));\n  grid-gap: 1.5rem;\n  position: relative;\n  left: 0;\n  transition: .3s;\n}\n\n.image-wrapper div {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.food-name {\n  color: var(--color1);\n  text-shadow: 2px 2px 2px var(--black);\n  top: 0;\n}\n\n.carousel-image {\n  width: 100%;\n  object-fit: cover;\n  display: block;\n  animation: inAndOut;\n  animation-duration: 1.5s;\n  animation-iteration-count: infinite;\n}\n\n.about-container{\n  color: var(--color1);\n  width: 60vw;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding: 2rem;\n  background-color: #00000099;\n  border: 5px solid var(--color2);\n  border-radius: 25px;\n  gap: 2rem;\n}\n\n.about-title{\n  color:var(--color3);\n  text-transform: uppercase;\n}\n\n.about-heading{\n  padding-bottom: 1rem;\n  color: var(--color3);\n}\n\n.about-text-container,\n.about-paragraph{\n  display: flex;\n  flex-direction: column;\n  gap: 1.5rem;\n}\n\n.contact-info-container{\n  display: grid;\n  width: 40vw;\n  grid-template-columns: repeat(2, 1fr);\n  grid-auto-rows: 200px;\n  gap: 2rem;\n}\n\n.address,\n.telephone,\n.email,\n.opening-time{\n  display: flex;\n  flex-direction: column;\n  gap: .5rem;\n  color: var(--color1);\n  padding: 2rem;\n  background-color: #00000099;\n  border: 5px solid var(--color2);\n  border-radius: 25px;\n}\n\n\n.address svg,\n.telephone svg,\n.email svg,\n.opening-time svg{\n  color: var(--color3);\n  font-size: 2rem;\n  position: relative;\n  right: 40%;\n\n\n}\n\n\n/* ID SELECTORS */\n\n#content {\n  display: grid;\n  grid-template-rows: 100px auto 75px;\n  height: 100%;\n}\n\n#home {\n  display: grid;\n  grid-template-columns: 1.5fr 1fr;\n  justify-items: center;\n  align-items: center;\n  height: 100%;\n}\n\n#menu {\n  padding: 2rem 5rem 0;\n  justify-content: center;\n  gap: 2rem;\n  \n  /* flex-wrap: wrap-reverse; */\n}\n\n#about{\n  padding: 2rem 5rem 0;\n  justify-content: center;\n  align-items: baseline;\n  width: 100%;\n  height: 100%;\n}\n\n#home,\n#menu,\n#about,\n#contact{\n  animation: transitionIn 0.75s;\n}\n\n/* ANIMATIONS */\n@keyframes transitionIn {\n  from {\n    opacity: 0;\n    transform: rotateX(-10deg);\n  }\n\n  to {\n    opacity: 1;\n    transform: rotateX(0);\n  }\n}\n\n\n@keyframes inAndOut {\n  0% {\n    scale: 1;\n  }\n\n  50% {\n    scale: 1.05\n  }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -6985,13 +6985,97 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-function createContact(){
+function createContact() {
   const contact = document.createElement("div");
-  contact.setAttribute("id","contact");
-  contact.setAttribute("style","display: none");
+  contact.setAttribute("id", "contact");
+  contact.setAttribute("style", "display: none");
+
+
+  contact.append(contactInfo())
 
   return contact;
 }
+
+function contactInfo() {
+  const contactInfoContainer = document.createElement("div");
+  const address = document.createElement("div");
+  const telephone = document.createElement("div");
+  const email = document.createElement("div");
+  const openingTime = document.createElement("div");
+
+  //Adress
+  const locationIcon = document.createElement("i");
+  const addressHeader = document.createElement("h3");
+  const addressInfo1 = document.createElement("p");
+  const addressInfo2 = document.createElement("p");
+
+  locationIcon.setAttribute("class", "fa-solid fa-location-dot");
+  addressHeader.textContent = "Address";
+  addressInfo1.textContent = "Peninsula Square";
+  addressInfo2.textContent = "London SE10 0DX";
+
+  address.setAttribute("class", "address");
+  address.append(locationIcon, addressHeader, addressInfo1, addressInfo2);
+
+  //Telephone
+  const telephoneIcon = document.createElement("i");
+  const telephoneHeader = document.createElement("h3");
+  const telephoneInfo1 = document.createElement("p");
+  const telephoneInfo2 = document.createElement("p");
+
+  telephoneIcon.setAttribute("class", "fa-solid fa-phone");
+  telephoneHeader.textContent = "Call Us";
+  telephoneInfo1.textContent = "+44 1234 456789";
+  telephoneInfo2.textContent = "01332 412 251";
+
+  telephone.setAttribute("class", "telephone");
+  telephone.append(telephoneIcon, telephoneHeader, telephoneInfo1, telephoneInfo2);
+
+  //Email
+  const emailIcon = document.createElement("i");
+  const emailHeader = document.createElement("h3");
+  const emailInfo1 = document.createElement("p");
+  const emailInfo2 = document.createElement("p");
+
+  emailIcon.setAttribute("class", "fa-solid fa-envelope");
+  emailHeader.textContent = "Email Us";
+  emailInfo1.textContent = "info@domain.com";
+  emailInfo2.textContent = "contact@domain.com";
+
+  email.setAttribute("class", "email");
+  email.append(emailIcon, emailHeader, emailInfo1, emailInfo2);
+
+
+  //Opening Time
+  const openingTimeIcon = document.createElement("i");
+  const openingTimeHeader = document.createElement("h3");
+  const openingTimeInfo1 = document.createElement("p");
+  const openingTimeInfo2 = document.createElement("p");
+
+  
+
+  openingTimeIcon.setAttribute("class", "fa-solid fa-clock");
+  openingTimeHeader.textContent = "Opening Hours";
+  openingTimeInfo1.textContent = "Monday - Friday";
+  openingTimeInfo2.textContent = "10:30AM - 08:00PM";
+
+  openingTime.setAttribute("class", "opening-time");
+  openingTime.append(openingTimeIcon, openingTimeHeader, openingTimeInfo1, openingTimeInfo2);
+
+
+  contactInfoContainer.setAttribute("class","contact-info-container")
+  contactInfoContainer.append(address, telephone, email, openingTime);
+  return contactInfoContainer;
+
+}
+
+function contactForm() {
+  //Hit us up!
+}
+
+// function maps(){
+
+// }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createContact());
 

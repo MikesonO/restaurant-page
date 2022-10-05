@@ -307,6 +307,42 @@ footer a {
   gap: 1.5rem;
 }
 
+.contact-info-container{
+  display: grid;
+  width: 40vw;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 200px;
+  gap: 2rem;
+}
+
+.address,
+.telephone,
+.email,
+.opening-time{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  color: var(--color1);
+  padding: 2rem;
+  background-color: #00000099;
+  border: 5px solid var(--color2);
+  border-radius: 25px;
+}
+
+
+.address svg,
+.telephone svg,
+.email svg,
+.opening-time svg{
+  color: var(--color3);
+  font-size: 2rem;
+  position: relative;
+  right: 40%;
+
+
+}
+
+
 /* ID SELECTORS */
 
 #content {
