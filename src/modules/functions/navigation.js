@@ -2,6 +2,7 @@ export function navigation() {
   const links = document.querySelectorAll(".header ul li a");
   links.forEach((link) => {
     link.addEventListener('click', () => {
+      console.log(link);
       if (!link.classList.contains("logo-link")) { //Adds active class to link clicked and displays page.
         display(link);
         links.forEach((link) => link.classList.remove("active"));
@@ -30,5 +31,19 @@ export function navigation() {
       document.getElementById("contact").style.display = "block";
     }
   }
+
+  //Event Listeners for Homepage Buttons
+
+  //Book Table Button
+  const bookTableButton = document.querySelector(".book-btn")
+  bookTableButton.addEventListener("click",()=>{
+   links[4].click();
+  })
+
+  //View Menu Button
+  const viewMenuButton = document.querySelector(".view-btn")
+  viewMenuButton.addEventListener("click",()=>{
+   links[1].click();
+  })
 }
 
