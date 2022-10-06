@@ -345,12 +345,25 @@ footer a {
 .form-container{
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  align-items: center;
+  gap: 1.5rem;
   color: var(--color1);
   padding: 2rem;
   background-color: #00000099;
   border: 5px solid var(--color2);
   border-radius: 25px;
+}
+
+.form-container h1{
+  color: var(--color3);
+}
+
+
+
+.send-btn{
+  background-color: var(--color3);
+  color: var(--color2);
+  width: 150px;
 }
 
 
@@ -389,6 +402,30 @@ footer a {
 #contact{
   padding: 2rem 5rem 0;
   grid-template-columns: 1fr 1fr;
+}
+
+#customer-name,
+#customer-email,
+#customer-message{
+  font-family: inherit;
+  width: 80%;
+  padding: .5rem 1rem;
+  color: var(--color1);
+  border: 2.5px solid var(--color2);
+  background-color: var(--black);
+  border-radius: 15px;
+  resize: none;
+}
+
+#customer-name:focus,
+#customer-email:focus,
+#customer-message:focus{
+  outline: 2.5px solid var(--color3);
+}
+
+
+#customer-message{
+  height: 90px;
 }
 
 #home,

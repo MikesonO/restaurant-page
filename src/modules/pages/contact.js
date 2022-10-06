@@ -94,21 +94,24 @@ function contactForm() {
   //Name Input
   inputName.setAttribute("type","text");
   inputName.setAttribute("name","customer-name");
+  inputName.setAttribute("id","customer-name");
   inputName.setAttribute("placeholder","Name");
 
   //Email Input
   inputEmail.setAttribute("type","text");
   inputEmail.setAttribute("name","customer-email");
+  inputEmail.setAttribute("id","customer-email");
   inputEmail.setAttribute("placeholder","Email");
 
   //Message Input
   inputMessage.setAttribute("name","customer-message");
+  inputMessage.setAttribute("id","customer-message");
   inputMessage.setAttribute("placeholder","Subject");
 
 
   //Send Button
   sendButton.textContent = "Send"
-  sendButton.setAttribute("class","send-btn");
+  sendButton.setAttribute("class","send-btn btn");
 
   //Hit Us Up!
 
