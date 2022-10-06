@@ -146,16 +146,33 @@ footer a {
   border-radius: 20px;
 }
 
-.book-btn {
+.book-btn,
+.send-btn  {
   background-color: transparent;
   border: 2px solid var(--color3);
   color: var(--color3);
+  transition: .5s;
 }
 
-.view-btn {
+.book-btn:hover,
+.send-btn:hover{
+  background-color: var(--color1);
+  border: 2px solid var(--color2);
+  color: var(--color2);
+}
+
+.view-btn{
   background-color: var(--color3);
   color: var(--color2);
   border: 2px solid var(--color3);
+  transition: .5s;
+}
+
+
+.view-btn:hover {
+  background-color: transparent;
+  color: var(--color1);
+  border: 2px solid var(--color1);
 }
 
 .home-container {
@@ -361,8 +378,6 @@ footer a {
 
 
 .send-btn{
-  background-color: var(--color3);
-  color: var(--color2);
   width: 150px;
 }
 
