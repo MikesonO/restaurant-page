@@ -45,5 +45,9 @@ export function navigation() {
   viewMenuButton.addEventListener("click",()=>{
    links[1].click();
   })
+
+  //Send Button
+  const sendButton = document.querySelector(".send-btn")
+  sendButton.addEventListener("click",() => location.reload())
 }
 
