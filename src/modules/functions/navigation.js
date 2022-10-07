@@ -48,6 +48,25 @@ export function navigation() {
 
   //Send Button
   const sendButton = document.querySelector(".send-btn")
-  sendButton.addEventListener("click",() => location.reload())
+  sendButton.addEventListener("click",() => location.reload());
+
+  //Logo Button
+  const logo = document.querySelector(".logo-hamburger")
+  logo.addEventListener("click",() => location.reload());
+
+
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector("header ul")
+
+  hamburger.addEventListener("click", ()=>{
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
+
+  document.querySelectorAll(".links").forEach(link => link.addEventListener("click", ()=>{
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+  }));
+
 }
 

@@ -6,7 +6,7 @@ function createHeader() {
     const header = document.createElement("header");
 
     header.classList.add("header");
-    header.appendChild(createLinks());
+    header.append(createLinks(),createLogo(),createHamburgerBtn());
 
     return header;
   }
@@ -97,6 +97,44 @@ function createHeader() {
 
     contact.appendChild(contactLink);
     return contact;
+  }
+
+  //Create Hamburger Button
+  function createHamburgerBtn(){
+    const hamburger = document.createElement("div");
+   
+    hamburger.setAttribute("class","hamburger");
+    hamburger.append(createBlock(),createBlock(),createBlock());
+
+    return hamburger;
+  }
+
+  function createBlock(){
+    const block = document.createElement("span");
+    block.setAttribute("class","block");
+    return block;
+  }
+
+  //Create Logo for Media Query
+  function createLogo(){
+    const logo = document.createElement("div");
+    const logoLink = document.createElement("a");
+    const logoText = document.createElement("h1");
+    const logoImage = document.createElement("img");
+
+    logo.setAttribute("class","logo-hamburger")
+    logoImage.setAttribute("src", logoImg);
+    logoImage.setAttribute("width", "40px");
+    logoImage.setAttribute("alt", "Restaurant Logo");
+    logoText.textContent = "Urban Burgers";
+    logoText.setAttribute("class", "logo");
+    logoLink.setAttribute("href", "#");
+    logoLink.setAttribute("class", "logo-link");
+
+    logoText.appendChild(logoImage);
+    logoLink.appendChild(logoText);
+    logo.appendChild(logoLink);
+    return logo;
   }
 
   return createHeader();

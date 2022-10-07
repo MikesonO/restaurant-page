@@ -24,6 +24,7 @@ body {
   background-image: url("../images/brick-background.jpg");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -113,6 +114,26 @@ footer a {
   text-shadow: 2px 2px 2px var(--black);
 }
 
+.hamburger,
+.logo-hamburger{
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger{
+  position: relative;
+  top: 3.5px;
+}
+
+.block{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--color1);
+}
 
 
 .home-container {
@@ -471,5 +492,64 @@ footer a {
 
   50% {
     scale: 1.05
+  }
+}
+
+
+/* MEDIA QUERIES */
+
+
+/* HAMBURGER NAVIGATION */
+@media only screen and (max-width: 850px) {
+
+  .logo-hamburger,
+  .hamburger{
+    display: block;
+    transition: 0.5s;
+  }
+
+  .hamburger.active .block:nth-child(2){
+    opacity: 0;
+  }
+
+  .hamburger.active .block:nth-child(1){
+    transform: translateY(8px) rotate(45deg)
+  }
+
+  .hamburger.active .block:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg)
+
+  }
+
+  .header{
+    background-image: linear-gradient(var(--color2),#000000CC);
+    justify-content: space-around;
+    padding: 0 3rem;
+    transition: 0.5s;
+  }
+
+  .header ul{
+    position: fixed;
+    left: -100%;
+    top: 100px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #000000CC;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .header ul li:nth-child(3){
+    display: none;
+  }
+
+
+  .header ul li{
+    margin: 16px 0;
+  }
+
+  .header ul.active{
+    left: 0;
   }
 }
