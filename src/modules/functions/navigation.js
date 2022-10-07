@@ -28,7 +28,7 @@ export function navigation() {
     } else if (link.textContent == "About") {
       document.getElementById("about").style.display = "flex";
     } else if (link.textContent == "Contact") {
-      document.getElementById("contact").style.display = "grid";
+      document.getElementById("contact").style.display = "flex";
     }
   }
 

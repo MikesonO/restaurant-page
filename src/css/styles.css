@@ -349,10 +349,11 @@ footer a {
 
 .contact-info-container{
   display: grid;
-  width: 40vw;
-  grid-template-columns: repeat(2, 1fr);
+  width: 50%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, .75fr));
   grid-auto-rows: 200px;
   gap: 2rem;
+  justify-content: center;
 }
 
 .address,
@@ -386,6 +387,8 @@ footer a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 500px;
+  height: fit-content;
   gap: 1.5rem;
   color: var(--color1);
   padding: 2rem;
@@ -435,7 +438,9 @@ footer a {
 
 #contact{
   padding: 2rem 5rem 0;
-  grid-template-columns: 1fr 1fr;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 #customer-name,
@@ -553,7 +558,7 @@ footer a {
 }
 
 
-/* Menu Page */
+/* HOME PAGE */
 @media only screen and (max-width:1125px){
 
   #home{
@@ -561,10 +566,19 @@ footer a {
   }
 }
 
-/* Menu Page */
+/* MENU PAGE */
 @media only screen and (max-width:867px){
 
   #menu{
   flex-wrap: wrap-reverse;
   }
+}
+
+/* ABOUT PAGE */
+
+@media only screen and (max-width:950px) {
+  .about-container{
+    width: 70vw;
+  }
+
 }
