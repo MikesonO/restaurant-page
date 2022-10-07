@@ -32,6 +32,7 @@ main {
   position: relative;
   height: 100%;
   width: 100%;
+  overflow: auto;
 }
 
 header {
@@ -246,7 +247,7 @@ footer a {
 
 .burger-menu {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
 }
@@ -423,8 +424,6 @@ footer a {
   padding: 2rem 5rem 0;
   justify-content: center;
   gap: 2rem;
-  
-  /* flex-wrap: wrap-reverse; */
 }
 
 #about{
@@ -551,5 +550,13 @@ footer a {
 
   .header ul.active{
     left: 0;
+  }
+}
+
+
+@media only screen and (max-width:867px){
+
+  #menu{
+  flex-wrap: wrap-reverse;
   }
 }
