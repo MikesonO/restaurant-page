@@ -215,19 +215,22 @@ footer a {
 .fire-overlay {
   position: absolute;
   bottom: 5%;
-  right: 7.5%;
+  right: 5%;
 }
 
 .burger {
   position: absolute;
-  bottom: -10%;
-  right: 7.5%;
+  bottom: 0;
+  right: 5%;
   -webkit-filter: drop-shadow(5px 20px 10px var(--black));
   filter: drop-shadow(5px 20px 10px var(--black));
 }
+.background-container{
+  z-index: -1;
+}
 
 .background-container img {
-  width: 500px;
+  width: 450px;
 }
 
 .menu-container {
@@ -310,9 +313,7 @@ footer a {
   width: 100%;
   object-fit: cover;
   display: block;
-  animation: inAndOut;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
+  animation: inAndOut 1.5s infinite;
 }
 
 .about-container{
@@ -413,9 +414,7 @@ footer a {
 }
 
 #home {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  justify-items: center;
+  padding-left: 10%;
   align-items: center;
   height: 100%;
 }
@@ -554,6 +553,15 @@ footer a {
 }
 
 
+/* Menu Page */
+@media only screen and (max-width:1125px){
+
+  #home{
+    background-image: linear-gradient(#00000000,#00000099 80%,#00000000);
+  }
+}
+
+/* Menu Page */
 @media only screen and (max-width:867px){
 
   #menu{

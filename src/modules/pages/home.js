@@ -4,7 +4,7 @@ import fireOverlay from '../../images/fire.png';
 function createHome(){
   const home = document.createElement("div");
   home.setAttribute("id","home");
-  home.setAttribute("style","display: grid");
+  home.setAttribute("style","display: flex");
 
   home.append(createHomeContent(),createBackground());
 

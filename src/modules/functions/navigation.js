@@ -22,7 +22,7 @@ export function navigation() {
     document.getElementById("contact").style.display = "none";
 
     if (link.textContent == "Home") {
-      document.getElementById("home").style.display = "grid";
+      document.getElementById("home").style.display = "flex";
     } else if (link.textContent == "Menu") {
       document.getElementById("menu").style.display = "flex";
     } else if (link.textContent == "About") {
