@@ -528,6 +528,10 @@ footer a {
     font-size: 2.5rem;
   }
 
+  .logo img{
+    width: 35px;
+  }
+
   .hamburger.active .block:nth-child(2){
     opacity: 0;
   }
@@ -611,7 +615,11 @@ footer a {
 /* Small Screen Fixes */
 @media only screen and (max-width:405px) {
   .logo{
-    font-size: 2rem;
+    font-size: 1.9rem;
+  }
+
+  .logo img{
+    width: 30px;
   }
 }
 
