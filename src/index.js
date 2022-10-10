@@ -13,7 +13,6 @@ import { navigation } from "./modules/functions/navigation";
 
 function pageLoad() {
   const content = document.getElementById("content");
-  console.log(content);
 
   content.append(
     createHeader,
