@@ -511,6 +511,10 @@ footer a {
     transition: 0.5s;
   }
 
+  .logo{
+    font-size: 2.5rem;
+  }
+
   .hamburger.active .block:nth-child(2){
     opacity: 0;
   }
