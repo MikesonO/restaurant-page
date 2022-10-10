@@ -113,6 +113,7 @@ footer a {
   gap: .5rem;
   color: var(--color1);
   text-shadow: 2px 2px 2px var(--black);
+  transition: .25s ease-in-out;
 }
 
 .hamburger,
@@ -250,7 +251,7 @@ footer a {
 
 .burger-menu {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
 }
@@ -264,6 +265,7 @@ footer a {
 
 .burger-price {
   color: var(--color3);
+  padding-left: 1rem;
 }
 
 
@@ -420,6 +422,7 @@ footer a {
   padding-left: 10%;
   align-items: center;
   height: 100%;
+  transition: padding 0.5s;
 }
 
 #menu {
@@ -434,6 +437,7 @@ footer a {
   align-items: baseline;
   width: 100%;
   height: 100%;
+  transition: padding 0.5s;
 }
 
 #contact{
@@ -505,11 +509,20 @@ footer a {
 /* HAMBURGER NAVIGATION */
 @media only screen and (max-width: 850px) {
 
+  #home{
+    padding: 1rem;
+  }
+
   .logo-hamburger,
   .hamburger{
     display: block;
     transition: 0.5s;
   }
+
+  .logo-link{
+    display: flex;
+  }
+
 
   .logo{
     font-size: 2.5rem;
@@ -559,6 +572,10 @@ footer a {
   .header ul.active{
     left: 0;
   }
+
+  .form-container{
+    min-width: 300px;
+  }
 }
 
 
@@ -581,8 +598,20 @@ footer a {
 /* ABOUT PAGE */
 
 @media only screen and (max-width:950px) {
+  #about{
+    padding: 1rem 2rem;
+  }
   .about-container{
-    width: 70vw;
+    width: 100%;
+    text-align: center;
   }
 
 }
+
+/* Small Screen Fixes */
+@media only screen and (max-width:405px) {
+  .logo{
+    font-size: 2rem;
+  }
+}
+
