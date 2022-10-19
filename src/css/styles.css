@@ -82,6 +82,7 @@ footer a {
 .links {
   color: var(--color1);
   font-size: 1.25rem;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 
@@ -613,6 +614,22 @@ footer a {
 }
 
 /* Small Screen Fixes */
+@media only screen and (max-width:545px) {
+
+  .home-btns{
+    justify-content: space-around;
+  }
+
+  #home{
+    text-align: center;
+  }
+  
+  .burger,
+  .fire-overlay{
+    right: 0;
+  }
+}
+
 @media only screen and (max-width:405px) {
   .logo{
     font-size: 1.9rem;
